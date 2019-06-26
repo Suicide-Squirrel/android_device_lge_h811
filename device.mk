@@ -25,4 +25,3 @@ PRODUCT_COPY_FILES += \
 
 # common g4
 $(call inherit-product, device/lge/g4-common/g4.mk)
-
