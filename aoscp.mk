@@ -8,9 +8,6 @@ $(call inherit-product, device/lge/h811/device.mk)
 # Inherit some common AOSCP stuff.
 $(call inherit-product, vendor/aoscp/configs/common_full_phone.mk)
 
-# Overlays (inherit after vendor/cm to ensure we override it)
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
 # Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := h811
 PRODUCT_NAME := aoscp_h811
