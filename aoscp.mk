@@ -1,10 +1,27 @@
-$(call inherit-product, device/lge/h811/h811.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+# Inherit from h811 device
+$(call inherit-product, device/lge/h811/device.mk)
 
 # Inherit some common AOSCP stuff.
 $(call inherit-product, vendor/aoscp/configs/common_full_phone.mk)
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# Set those variables here to overwrite the inherited values.
+PRODUCT_DEVICE := h811
+PRODUCT_NAME := aoscp_h811
+PRODUCT_BRAND := lge
+PRODUCT_MODEL := LG-H811
+PRODUCT_MANUFACTURER := LGE
+
+PRODUCT_GMS_CLIENTID_BASE := android-lge
+
+TARGET_VENDOR_PRODUCT_NAME := "LG G4 H811"
+TARGET_VENDOR_DEVICE_NAME := "LG G4 H811"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE="g4" \
