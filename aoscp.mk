@@ -8,6 +8,10 @@ $(call inherit-product, device/lge/h811/device.mk)
 # Inherit some common AOSCP stuff.
 $(call inherit-product, vendor/aoscp/configs/common_full_phone.mk)
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2560
+TARGET_SCREEN_WIDTH := 1440
+
 # Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := h811
 PRODUCT_NAME := aoscp_h811
