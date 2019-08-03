@@ -6,7 +6,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, device/lge/h811/device.mk)
 
 # Inherit some common AOSCP stuff.
-$(call inherit-product, vendor/aoscp/configs/common_full_phone.mk)
+$(call inherit-product, vendor/pa/main.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2560
@@ -14,7 +14,7 @@ TARGET_SCREEN_WIDTH := 1440
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := h811
-PRODUCT_NAME := aoscp_h811
+PRODUCT_NAME := pa_h811
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-H811
 PRODUCT_MANUFACTURER := LGE
