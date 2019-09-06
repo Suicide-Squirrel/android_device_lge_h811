@@ -16,3 +16,8 @@
 
 PRODUCT_MAKEFILES += \
     $(LOCAL_DIR)/lineage_h811.mk
+
+COMMON_LUNCH_CHOICES := \
+lineage_h811-userdebug \
+lineage_h811-user \
+lineage_h811-eng
