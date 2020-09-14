@@ -25,6 +25,3 @@ TARGET_OTA_ASSERT_DEVICE := g4,p1,h811,ls991_UsU
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineageos_h811_defconfig
-
-# inherit from the proprietary version
--include vendor/lge/h811/BoardConfigVendor.mk
